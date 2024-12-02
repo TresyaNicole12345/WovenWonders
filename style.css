@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woven Wonders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5F1EC; /* Light pastel pink */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #A9B2AD;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .left-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .icon-img {
+            width: 90px;
+            height: 70px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Button color styles */
+        .navbar .btn-collections {
+            background-color: #4C6A92; /* Blue */
+            color: white;
+        }
+
+        .navbar .btn-collections:hover {
+            background-color: #3A5676; /* Darker blue */
+        }
+
+        .navbar .btn-references {
+            background-color: #5F6561; /* Greenish */
+            color: white;
+        }
+
+        .navbar .btn-references:hover {
+            background-color: #4B5249; /* Darker greenish */
+        }
+
+        .navbar .btn-contact {
+            background-color: #E6A2A2; /* Light Red */
+            color: white;
+        }
+
+        .navbar .btn-contact:hover {
+            background-color: #C57C7C; /* Darker red */
+        }
+
+        /* Add padding to the body to prevent overlap with the navbar */
+        body {
+            padding-top: 80px; /* Adjust according to the height of the navbar */
+        }
+
+        /* Other card and image styling remains the same as in your original code */
+    </style>
+</head>
+<body>
+
+    <!-- Navbar with Icon and Links -->
+    <div class="navbar">
+        <!-- Left Icon -->
+        <div class="left-icon">
+            <img src="icon.png" alt="Site Icon" class="icon-img">
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+            <a href="#collections" class="btn btn-collections">Collections</a>
+            <a href="#references" class="btn btn-references">References</a>
+            <a href="#contact" class="btn btn-contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card-container">
+            <div class="row card-content">
+                <div class="col-md-6 position-relative">
+                    <img src="cat.png" alt="Cat" class="overlap-img bend-cat" data-aos="fade-up">
+                </div>
+                <div class="col-md-6 card-text">
+                    <h1>Woven Wonders</h1>
+                    <p>A collection of my crochet projects, inspirations, and sources of crochet patterns.</p>
+                    <a href="#" class="btn btn-outline-primary">Explore More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel below the Woven Wonders section -->
+        <div class="container mt-5 carousel-section">
+            <h2 class="text-center mb-4">Projects Overview</h2>
+            <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet.png" class="d-block w-100" alt="Crochet Project 1">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet2.png" class="d-block w-100" alt="Crochet Project 2">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet3.png" class="d-block w-100" alt="Crochet Project 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet4.jpg" class="d-block w-100" alt="Crochet Project 4">
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#first-project">
+                                    <img src="crochet5.jpg" class="d-block w-100" alt="Crochet Project 5">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet6.jpg" class="d-block w-100" alt="Crochet Project 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet7.jpg" class="d-block w-100" alt="Crochet Project 7">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet8.jpg" class="d-block w-100" alt="Crochet Project 8">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet9.jpg" class="d-block w-100" alt="Crochet Project 9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

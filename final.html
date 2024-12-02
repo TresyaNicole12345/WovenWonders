@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woven Wonders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #F5F1EC;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        /* Transparent Navbar with responsiveness */
+        .navbar {
+            background-color: rgba(171, 181, 176, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            width: 110px;
+            height: 90px;
+        }
+
+        .navbar-toggler-icon {
+            background-color: rgba(95, 101, 97, 0.7);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar .btn {
+            margin: 5px;
+            color: white;
+        }
+
+        .btn-collections {
+            background-color: #9fa3a2;
+        }
+
+        .btn-collections:hover {
+            background-color: #3A5676;
+        }
+
+        .btn-references {
+            background-color: #5F6561;
+        }
+
+        .btn-references:hover {
+            background-color: #4B5249;
+        }
+
+        .btn-contact {
+            background-color: #E6A2A2;
+        }
+
+        .btn-contact:hover {
+            background-color: #C57C7C;
+        }
+
+        @media (max-width: 768px) {
+            .navbar .btn {
+                margin: 5px 0;
+            }
+            
+        }
+
+
+        body {
+            padding-top: 80px; /* Adjust according to the height of the navbar */
+        }
+        
+        /* Card container styling for Woven Wonders */
+.card-container {
+    background: #C1C8C7;
+    border-radius: 16px;
+    padding: 2rem; /* Reduced padding for smaller screens */
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    overflow: visible;
+    margin-top: 180px;
+}
+
+/* Styling for Woven Wonders text */
+.card-container h1 {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+    margin-bottom: 1rem;
+    color: #E6E3DA;
+    text-shadow: -2px -2px 0 #333, 2px -2px 0 #333, -2px 2px 0 #333, 2px 2px 0 #333;
+    text-align: center; /* Center-align for smaller screens */
+}
+
+/* Button styles */
+.btn-outline-primary {
+    border-color: #5F6561;
+    color: #5F6561;
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.5rem 1.5rem; /* Adjust padding */
+    display: block; /* Ensure button takes full width */
+    margin: 1rem auto; /* Center button for smaller screens */
+}
+
+.btn-outline-primary:hover {
+    background-color: #A9B2AD;
+    color: #FFFFFF;
+}
+
+/* Overlapping image styling */
+/* Adjust image height and scaling */
+.overlap-img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Let height adjust automatically based on width */
+    margin: 1rem auto; /* Center the image */
+    display: block; /* Ensure it is treated as a block element */
+    position: relative; /* Allow positioning within the container */
+    top: -40px; /* This will push the image upward to create the peeking effect */
+    z-index: 1; /* Ensure the image stays above the content */
+}
+
+/* Make the container adjust naturally based on its content */
+.card-container {
+    padding: 2rem; /* Adjust padding as needed */
+    position: relative; /* Maintain relative positioning */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 180px; /* Adjust if needed */
+    background: #C1C8C7;
+    border-radius: 16px;
+    /* Remove any fixed height here to allow the container to adjust based on content */
+}
+/* Layout for text and image in Woven Wonders */
+.card-content {
+    display: flex;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    align-items: center;
+    justify-content: center; /* Center content for smaller screens */
+    text-align: center; /* Ensure text is centered for smaller screens */
+}
+
+.card-text {
+    margin-left: 0; /* Reset margin for smaller screens */
+    margin-top: 1rem; /* Add space between text and image */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .card-container {
+        position: relative; /* Enable relative positioning */
+        padding: 1.5rem; /* Decrease padding for desktop */
+        max-height: 300px; /* Limit the maximum height for desktop */
+        margin-top: 150px; /* Adjust top margin for desktop */
+        width: 1220px; /* Set a specific width (80% of the container's width) */
+        margin-left: auto; /* Center the card container */
+        margin-right: auto; /* Center the card container */
+        }
+
+     .overlap-img {
+        max-height: 400px; /* Adjust max height for large screens */
+        width: 100%; /* Ensure the image scales based on width */
+        top: -130px; /* Increase overlap for larger screens */
+        left: -100px; /* Move the image to the left by 50px */
+
+    }
+
+    .card-text {
+        margin-left: -100px; /* Adjust text margin for spacing */
+        position: relative; /* Make it relative so we can adjust its position */
+        top: -60px; /* Move the text upwards by 20px */
+    }
+
+    .card-container h1 {
+        font-size: 4rem; /* Larger font size for desktops */
+        text-align: left;
+    }
+
+    .card-container p {
+        font-size: 1.5rem; /* Larger font size for desktops */
+        text-align: left;
+    }
+
+    .btn-outline-primary {
+        display: inline-block; /* Inline buttons for desktops */
+        margin: 0; /* Reset margin */
+    }
+
+ 
+    .card-content {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+        text-align: left;
+    }
+
+   
+}
+
+
+/* Responsive adjustments for very small screens (max-width 480px) */
+@media (max-width: 480px) {
+    .card-container {
+        width: 90%; /* Further reduce width for very small screens */
+        padding: 0.8rem; /* Reduce padding more for small screens */
+        margin-top: 80px; /* Adjust the top margin */
+    }
+
+    .overlap-img {
+        max-height: 200px; /* Further reduce the image size */
+        top: -60px; /* Slightly adjust the overlap */
+        left: -20px; /* Slightly move the image to the left */
+    }
+
+    .card-text {
+        margin-left: 0; /* Reset margin for small screens */
+        position: relative;
+        top: -20px; /* Adjust the text position to avoid overlap */
+        font-size: 0.9rem; /* Adjust font size for better readability */
+    }
+
+    .card-container h1 {
+        font-size: 1.8rem; /* Smaller heading for small devices */
+        line-height: 1.3; /* Adjust line height for better readability */
+    }
+
+    .card-container p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .btn-outline-primary {
+        padding: 0.4rem 1rem; /* Smaller button padding for very small screens */
+        font-size: 0.8rem; /* Slightly smaller font for buttons */
+    }
+
+    .card-content {
+        flex-wrap: wrap; /* Allow wrapping for mobile */
+        text-align: center; /* Center text for small devices */
+    }
+
+
+     /* Further reduce space for very small screens */
+     .carousel-item img {
+        max-height: 200px; /* Make images smaller */
+        object-fit: contain; /* Ensure images fit well */
+    }
+
+    /* Reduce carousel item margins */
+    .carousel-item {
+        padding: 0;
+    }
+
+
+    
+}
+
+
+/* Small Devices (Phones - Landscape mode) */
+@media (max-width: 600px) {
+    /* Styles for phones in landscape mode */
+    .card-container {
+        width: 95%; /* Make the card container 95% of the available width */
+        padding: 1rem; /* Adjust padding for smaller screens */
+        margin-top: 80px; /* Adjust the top margin for better spacing */
+    }
+
+    .overlap-img {
+        max-height: 250px; /* Reduce the image height for smaller screens */
+        top: -70px; /* Adjust the image positioning upwards */
+        left: -10px; /* Shift the image to the left a bit */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Slightly smaller font size for better readability */
+        margin-left: 0; /* Remove any left margin */
+    }
+
+    .btn-outline-primary {
+        padding: 0.4rem 1rem; /* Smaller padding for buttons */
+        font-size: 0.8rem; /* Smaller font size for buttons */
+    }
+
+    .card-container h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .card-container p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .card-content {
+        text-align: left; /* Ensure text aligns correctly */
+    }
+
+    
+}
+        
+        /* Styling the images within the carousel */
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            padding: 10px; /* Adds space around the image */
+            border: 5px solid #e5c3c3; /* Add a border with the desired color */
+            border-radius: 10px; /* Optional: add rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+        }
+
+
+ /* Styling for the Project word in the carousel header */
+.carousel-section h2 .project {
+    font-weight: 300; /* Thin font */
+    color: #D78484; /* Soft gray color */
+}
+
+/* Styling for the Overview word in the carousel header */
+.carousel-section h2 {
+
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #D78484; /* Base color for thin text */
+    font-weight: 1000; /* Default thin weight */
+}
+
+
+
+
+    /* Custom styling for cloud-shaped carousel arrows */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #E6A2A2; /* Soft pastel color */
+        border-radius: 50%; /* Circular arrow buttons */
+        padding: 20px;
+        width: 60px;
+        height: 60px;
+        border: 3px solid #f5f5f5; /* Soft pink border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a cloud effect */
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: #d18181; /* Light pink color on hover */
+        border-color: #d18181; /* Matching border color on hover */
+    }
+
+    /* Adjust position of the carousel arrows */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: -10px;
+        height: -20px;
+        margin-top: 40px; /* Move arrows slightly down */
+    }
+
+    @media (max-width: 768px) {
+
+        
+        .navbar {
+            padding: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar .nav-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        
+    }
+
+    .why {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Adjusted to make it not stretch too wide */
+    min-height: 50vh; /* Ensure height scales with viewport */
+    padding: 4vw; /* Internal padding */
+    background-color: #F5F1EC; /* Light pastel pink */
+    border-radius: 1vw; /* Scaled border radius */
+    margin: 3vw auto; /* Center the section horizontally */
+    position: relative; /* To position pseudo-elements */
+    z-index: 1;
+    box-shadow: 0 0.6vw 1vw rgba(0, 0, 0, 0.1); /* Scaled shadow */
+    margin-top: 300px;
+}
+
+/* Add the cracked border effect */
+.why::before {
+    content: '';
+    position: absolute;
+    top: -2vw; /* Position above the .why section */
+    left: 0;
+    width: 100%;
+    height: 4vw; /* Thickness of the crack effect */
+    background: repeating-linear-gradient(
+        -45deg,
+        #5F6561, /* Light pink crack */
+        #5F6561 1vw,
+        transparent 1vw,
+        transparent 2vw
+    ); /* Creates the "cracked" look */
+    z-index: -1;
+}
+
+/* Styling for the text content inside .why */
+.why .text {
+    max-width: 40vw; /* Limit text width */
+    color: #5F6561;
+}
+
+.why h1 {
+    font-weight: bold;
+    font-size: 2.5vw; /* Scaled font size */
+    color: #D78484; /* Slightly darker pink for heading */
+    margin-bottom: 1vw; /* Scaled margin */
+}
+
+.why p {
+    font-size: 1.25vw; /* Scaled font size */
+    line-height: 1.8vw; /* Adjusted line height */
+    color: #8F6B6B; /* Muted shade for text */
+}
+
+/* Styling for the image */
+.why img {
+    width: 35vw; /* Scales the image */
+    border-radius: 1vw; /* Scaled border radius */
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .why {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center them */
+        padding: 10vw 5vw; /* Increase padding for smaller screens */
+        margin-top: 150px; /* Adjust margin top for smaller screens */
+    }
+
+    .why .text {
+        max-width: 90vw; /* Take up more width for text */
+        text-align: center; /* Center text */
+    }
+
+    .why h1 {
+        font-size: 5vw; /* Larger heading on smaller screens */
+        margin-bottom: 2vw; /* Adjust margin for larger text */
+    }
+
+    .why p {
+        font-size: 3.5vw; /* Larger paragraph text */
+        line-height: 5vw; /* Adjust line height */
+    }
+
+    .why img {
+        width: 70vw; /* Larger image width */
+        margin-top: 2vw; /* Add space between image and text */
+    }
+}
+
+/* Optional: For even smaller screens (like mobile phones), you can add another media query */
+@media (max-width: 480px) {
+    .why h1 {
+        font-size: 6vw; /* Even larger font for very small screens */
+    }
+
+    .why p {
+        font-size: 4vw; /* Adjust paragraph text further */
+    }
+
+    .why img {
+        width: 90vw; /* Even larger image width */
+    }
+}
+
+.collection-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #C1C8C7;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+/* Explanation box inside the collection */
+.collection-explanation {
+  width: 45%;
+  padding: 30px;
+  background-color: #C1C8C7;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.collection-explanation p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #eaeaea;
+  border: 2px #5F6561;
+}
+
+/* Image slider section */
+.collection-slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px;
+  background-color: #C1C8C7;
+  border-radius: 15px;
+  width: 50%;
+  scrollbar-width: none; /* Hide scrollbar for modern browsers */
+}
+
+.collection-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.collection-slide {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 220px;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #5F6561;
+  transition: border 0.3s ease, transform 0.2s ease;
+}
+
+.collection-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.collection-slide:hover {
+  border: 2px solid #ff805d; /* Accent color for hover */
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collection-section {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px;
+    padding: 20px; /* Reduce padding for smaller screens */
+    margin-top: 150px; /* Adjust margin-top for smaller screens */
+    width: 85%; /* Reduce width to make section smaller */
+  }
+
+  .collection-explanation {
+    width: 90%; /* Take up more width for explanation */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .collection-slider {
+    width: 100%; /* Make slider full width */
+  }
+
+  .collection-slide {
+    width: 120px; /* Adjust slide width for smaller screens */
+    height: 180px; /* Adjust slide height for smaller screens */
+  }
+}
+
+/* Optional: For very small screens (phones) */
+@media (max-width: 480px) {
+  .collection-section {
+    padding: 15px; /* Even smaller padding */
+    width: 90%; /* Reduce width further */
+    margin-top: 100px; /* Adjust top margin for smaller screens */
+  }
+
+  .collection-explanation {
+    width: 100%; /* Full width for explanation */
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .collection-slider {
+    width: 100%; /* Make slider full width */
+  }
+
+  .collection-slide {
+    width: 100px; /* Smaller slides on very small screens */
+    height: 150px; /* Adjust height for better proportion */
+  }
+}
+
+/* CSS for highlighted image */
+.collection-slide.highlight {
+  border: 3px solid #FFD700; /* Gold border for highlighting */
+  transform: scale(1.05); /* Slightly zoom the image */
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* Button container */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px; /* Optional: controls button container width */
+  margin: 20px auto;
+}
+
+/* Common Button Styling */
+.navigation-buttons button {
+  padding: 12px 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #5F6561; /* Soft greenish grey */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for buttons */
+.navigation-buttons button:hover {
+  background-color: #3A5676; /* Muted blue for hover */
+  transform: scale(1.05);
+}
+
+/* Specific button styles for Next and Previous */
+#forward-btn {
+  background-color: #e5c3c3; /* Light muted green for Next button */
+}
+
+#forward-btn:hover {
+  background-color: #7a8078; /* Slightly darker green for hover */
+}
+
+/* Optional: add a box-shadow for extra styling */
+.navigation-buttons button:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Collection_Title {
+  border: 2px solid #ddd; /* Same border style as collections */
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px; /* Space below */
+  animation: fadeInUp 1s ease-out; /* Animation when page loads */
+  margin-top: 300px;
+}
+
+.Collection_Title h2 {
+    font-weight: bold;
+  font-family: 'Arial', sans-serif; /* Same font as collections */
+  color: #5F6561;
+  font-size: 2em;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Favorite.Crocheters {
+    padding-top: 200px; /* This can replace margin-top to pull the heading downward */
+    color: #b67070;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+/* Base styling for larger screens */
+.wordings-container {
+    margin-top: 90px;
+  display: flex;
+  justify-content: space-between; /* Align the two sections side by side */
+  gap: 1rem; /* Space between the sections */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.wordings-section, .reverse-wordings-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #e5c3c3; /* Soft cream background */
+  color: #3A5676; /* Matches hover color for btn-collections */
+  font-family: 'Arial', sans-serif;
+  border: 4px dashed #9fa3a2; /* Cute border with palette */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+  width: 48%; /* Ensures both sections stay within the container */
+}
+
+.text-content {
+  max-width: 40%;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4B5249; /* Matches button hover for btn-collections */
+}
+
+.text-content-reverse h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #4B5249; /* Matches button hover for btn-collections */
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5F6561; /* Matches btn-references */
+}
+
+
+.text-content-reverse p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5F6561; /* Matches btn-references */
+}
+
+.media-content, .media-content-reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
+}
+
+.image-container, .image-container-reverse {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border: 4px solid #9fa3a2; /* Matches btn-collections */
+  border-radius: 15px; /* Rounded image border */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img, .image-container-reverse img {
+  width: 100%;
+}
+
+.play-button, .play-button-reverse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: #5F6561; /* Matches btn-references */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover, .play-button-reverse:hover {
+  background-color: #4B5249; /* Matches btn-references hover */
+}
+
+.play-button::before, .play-button-reverse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 12px solid white;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+
+.description, .description-reverse {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #3A5676; /* Harmonized with header color */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices (up to 600px) */
+@media screen and (max-width: 600px) {
+  .wordings-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 2rem; /* Increase gap for clarity */
+  }
+
+  .wordings-section, .reverse-wordings-section {
+    width: 100%; /* Full width for mobile devices */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .text-content h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .text-content p, .description, .description-reverse {
+    font-size: 0.9rem; /* Adjust text size */
+  }
+
+  .image-container, .image-container-reverse {
+    max-width: 250px; /* Smaller images on mobile */
+  }
+
+  .play-button, .play-button-reverse {
+    width: 50px; /* Smaller play button */
+    height: 50px;
+  }
+}
+
+/* Tablets (600px to 1024px) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .wordings-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 1rem; /* Gap between sections */
+  }
+
+  .wordings-section, .reverse-wordings-section {
+    width: 100%; /* Full width for tablet */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .text-content h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+
+  .text-content p, .description, .description-reverse {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .image-container, .image-container-reverse {
+    max-width: 280px; /* Adjust image size */
+  }
+
+  .play-button, .play-button-reverse {
+    width: 55px; /* Slightly larger play button */
+    height: 55px;
+  }
+}
+
+/* Desktops and Larger Screens (1024px and above) */
+@media screen and (min-width: 1025px) {
+  .wordings-container {
+    display: flex;
+    justify-content: space-between; /* Keep sections side by side */
+    gap: 2rem; /* Space between sections */
+  }
+
+  .wordings-section, .reverse-wordings-section {
+    width: 48%; /* Each section takes up 48% of the container */
+    padding: 2rem;
+  }
+
+  .text-content h2 {
+    font-size: 2rem; /* Default heading size */
+  }
+
+  .text-content p, .description, .description-reverse {
+    font-size: 1rem; /* Default text size */
+  }
+
+  .image-container, .image-container-reverse {
+    max-width: 300px; /* Default image size */
+  }
+
+  .play-button, .play-button-reverse {
+    width: 60px; /* Default play button size */
+    height: 60px;
+  }
+}
+
+
+
+.aesthetic-logo {
+  flex: 1; /* Ensures the slogan takes up 1x the width of the left section */
+  font-size: 1.5rem; /* Adjusts the font size for the entire slogan */
+  font-weight: bold; /* Makes the text bold */
+  color: #d18181; /* Dark color for text */
+  line-height: 1.4; /* Adjusts the line height for readability */
+  text-align: center; /* Centers the text */
+  margin: 0; /* Removes default margin */
+  padding: 20px 0; /* Adds padding to the top and bottom */
+  max-width: 80%; /* Ensures the text doesn't stretch too far */
+  
+  /* Adds lines at the top and bottom */
+  border-top: 2px solid #b67070; /* Top line */
+  border-bottom: 2px solid #b67070; /* Bottom line */
+
+  /* Adjust the positioning of the slogan */
+  margin-top: 350px; /* Adds space from the top */
+}
+
+.aesthetic-logo span {
+  display: block; /* Forces each word to be on a new line */
+  font-size: 2rem; /* Adjusts the font size for each word */
+  margin-bottom: 5px; /* Adds space between each word */
+}
+
+.aesthetic-logo br {
+  display: none; /* Hides any <br> tags */
+}
+
+
+
+.right-section {
+margin-top: 280px;
+  flex: 2;
+  padding: 20px;
+}
+
+.right-section .main-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #b67070;
+}
+
+.right-section .benefits-title {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  color:#d38c8c ;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 15px;
+  background-color: #d181812a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.benefit-text .benefit-heading {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.benefit-text .benefit-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+
+/* Unique class for the contact section */
+.contact-section {
+    margin-top: 300px;
+    border: 2px dashed #7a8078; /* Adding dashed border using the color from your palette */
+  background-color: #f7f4f4; /* Light background color */
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: #3A5676; /* Using your palette color */
+}
+
+.contact-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8F6B6B; /* Matching your color palette */
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  font-size: 1.2rem;
+  color: #b67070;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  font-size: 1.1rem;
+  color: #5d5d5d;
+}
+
+.contact-info a {
+  color: #b67070;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  color: #3A5676;
+  text-decoration: underline;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-details, .contact-info {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+            <img src="icon.png" alt="Site Icon">
+        </a>
+
+        <!-- Toggler Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="btn btn-collections nav-link" href="#collections">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-references nav-link" href="#references">References</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-contact nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+    <div class="container mt-5">
+        <div class="card-container">
+            <div class="row card-content">
+                <div class="col-md-6 position-relative">
+                    <img src="cat.png" alt="Cat" class="overlap-img bend-cat" data-aos="fade-up">
+                </div>
+                <div class="col-md-6 card-text">
+                    <h1>Woven Wonders</h1>
+                    <p>A collection of my crochet projects.</p>
+                    <a href="#explore" class="btn btn-outline-primary" >Explore More</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Carousel below the Woven Wonders section -->
+        <div class="container mt-5 carousel-section">
+            <h2 class="text-center mb-4">
+                <span class="project" id="explore" >Project</span> Overview
+            </h2>
+            <div id="multiItemCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"> <!-- Automatic cycle every 3 seconds -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#multiItemCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet1.png" class="d-block w-100" alt="Crochet Project 1">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet2.png" class="d-block w-100" alt="Crochet Project 2">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet3.png" class="d-block w-100" alt="Crochet Project 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet4.png" class="d-block w-100" alt="Crochet Project 4">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet5.png" class="d-block w-100" alt="Crochet Project 5">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet6.png" class="d-block w-100" alt="Crochet Project 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="crochet7.png" class="d-block w-100" alt="Crochet Project 7">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet8.png" class="d-block w-100" alt="Crochet Project 8">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="crochet9.png" class="d-block w-100" alt="Crochet Project 9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="why">
+            <div class="text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <h1>Why I Started Crocheting</h1>
+                <p>I started crocheting as a creative outlet and a way to unwind. It has become a hobby that allows me to relax and create beautiful, handmade items that bring joy to others.</p>
+            </div>
+            <img src="me.png" alt="Me" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+        </div>
+
+        <div class="Collection_Title" id="collections">
+            <h2>Explore a piece!</h2>
+        </div>
+        
+        <div class="collection-section">
+            <div class="collection-explanation">
+                <p id="text-display">
+                    "Select an image to see its description."
+                </p>
+            </div>
+            <div class="collection-slider">
+                <div class="collection-slide" data-description="Description for Image 1: A soft representation of butterflies.">
+                    <img src="crochet1.png" alt="Slide 1">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 2: A mysterious portrait with shadows.">
+                    <img src="crochet2.png" alt="Slide 2">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet3.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet4.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet5.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet6.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet7.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet8.png" alt="Slide 3">
+                </div>
+                <div class="collection-slide" data-description="Description for Image 3: A surreal depiction of a hand holding a pomegranate.">
+                    <img src="crochet9.png" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation-buttons">
+            <button id="forward-btn">Click me</button>
+        </div>
+
+<h2 class="Favorite Crocheters text-center my-5" id="references">My Favorite Crochet Creators</h2>
+
+<section class="wordings-container">
+  <div class="wordings-section" id="chendaSection">
+    <div class="text-content">
+      <h2>KEO CHENDA</h2>
+      <p>She likes making DIY crochet projects and likes to share how to crochet clothes, bags, bucket hats, and more.</p>
+    </div>
+    <div class="media-content">
+      <div class="image-container">
+        <a href="https://youtu.be/sP6EmYnSfm0?si=ll_MMqYX8XRkrCOd" target="_blank">
+          <img src="chenda.png" alt="Descriptive alt text" class="img-fluid"/>
+        </a>
+        <button class="play-button btn btn-primary"></button>
+      </div>
+      <p class="description">
+        "I really enjoy watching and learning from Chenda because of her adorable and creative designs."
+      </p>
+    </div>
+  </div>
+
+  <div class="wordings-section reverse-wordings-section" id="vinitaSection">
+    <div class="media-content-reverse">
+      <div class="image-container-reverse">
+        <a href="https://youtu.be/G-AkWUVyLEo?si=48NR_SL9LmdBGlP2" target="_blank">
+          <img src="vinita.png" alt="Descriptive alt text" class="img-fluid"/>
+        </a>
+        <button class="play-button-reverse btn btn-primary"></button>
+      </div>
+      <p class="description-reverse">
+        "I learned how to crochet from Vinita, and she is absolutely amazing."
+      </p>
+    </div>
+    <div class="text-content-reverse">
+      <h2>Vinita</h2>
+      <p>She's Vinita and on her channel, I find crochet and craft tutorials.</p>
+    </div>
+  </div>
+</section>
+
+      
+        </section>
+          <div class="container" style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <!-- Left Section: Slogan -->
+            <h3 class="aesthetic-logo" data-aos="fade-left" data-aos-duration="1000">
+                <span>Stitching</span>
+                <span>Happiness,</span>
+                <span>One</span>
+                <span>Loop</span>
+                <span>at</span>
+                <span>a</span>
+                <span>Time</span>
+            </h3>
+    
+            <!-- Right Section -->
+            <div class="right-section" data-aos="fade-right" data-aos-duration="1000">
+                <h1 class="main-title" data-aos="zoom-in" data-aos-duration="1000">Crochet Benefits</h1>
+                <h3 class="benefits-title" data-aos="zoom-in" data-aos-duration="1000">BENEFITS THAT I GET BY DOING CROCHET</h3>
+                <div class="benefits-list">
+                    <div class="benefit-item" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="benefit-icon">
+                            <img src="smiley.png" alt="Mishap Icon">
+                        </div>
+                        <div class="benefit-text">
+                            <h4 class="benefit-heading">FREEDOM OF EXPRESSION</h4>
+                            <p class="benefit-description">Crochet provides a creative outlet for expressing personal style and can be a rewarding, fulfilling hobby.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="benefit-icon">
+                            <img src="ball.png" alt="Liability Icon">
+                        </div>
+                        <div class="benefit-text">
+                            <h4 class="benefit-heading">PROBLEM SOLVING</h4>
+                            <p class="benefit-description">Enhances problem-solving abilities by requiring careful planning and pattern-following</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="benefit-icon">
+                            <img src="wink.png" alt="Safety Icon">
+                        </div>
+                        <div class="benefit-text">
+                            <h4 class="benefit-heading">THERAPEUTIC</h4>
+                            <p class="benefit-description">Crochet promotes relaxation and helps reduce anxiety by focusing the mind on a creative task.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section class="contact-section">
+            <div class="container text-center">
+              <h2 class="contact-title"  id="contact">Contact Me</h2>
+              <p class="contact-details">Feel free to reach out to me via the following channels:</p>
+              <div class="contact-info">
+                <p><strong>Name:</strong> Tricia Nicole De Asis</p>
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/tricia.2339" target="_blank">[Tricia Nicole De Asis]</a></p>
+                <p><strong>Twitter:</strong> <a href="@Tresyaaaaa1   " target="_blank">[@Tresyaaaaa1]</a></p>
+                <p><strong>Phone:</strong> 09477188976</p>
+                <p><strong>Email:</strong> <a href="mailto:triciadeasis7@gmail.com">triciadeasis&@gmail.com</a></p>
+              </div>
+            </div>
+          </section>
+          
+
+          
+        
+           
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,  // Duration of the animation (in ms)
+                easing: 'ease-in-out',  // Easing function for animation
+                once: true,  // Animation triggers only once when scrolling down
+            });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0; // Track the current index of the images
+
+    const slides = document.querySelectorAll('.collection-slide');
+    const descriptionBox = document.getElementById('text-display');
+    const totalSlides = slides.length;
+
+    // Function to update the description and highlight the current image
+    function updateDescription() {
+        const description = slides[currentIndex].getAttribute('data-description');
+        descriptionBox.textContent = description;
+
+        // Remove highlight from all images
+        slides.forEach(slide => slide.classList.remove('highlight'));
+
+        // Add highlight to the current image
+        slides[currentIndex].classList.add('highlight');
+    }
+
+    // Function to show the next image
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalSlides; // Loop back to the first image after the last one
+        updateDescription();
+
+        // Smooth scroll to the next image
+        const slideWidth = slides[0].offsetWidth;
+        const slider = document.querySelector('.collection-slider');
+        slider.scrollTo({
+            left: slideWidth * currentIndex,
+            behavior: 'smooth'
+        });
+    }
+
+    // Add event listener to the "Next Piece" button
+    document.getElementById('forward-btn').addEventListener('click', nextImage);
+
+    // Initialize the first image and description
+    updateDescription();
+});
+
+
+ // Function to add animation class when the section is in view
+ document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll('.wordings-section, .reverse-wordings-section');
+      
+      const options = {
+        root: null, // viewport
+        rootMargin: "0px",
+        threshold: 0.1, // Trigger when 10% of the section is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target); // Stop observing once animated
+          }
+        });
+      }, options);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  
+    </script>
+</body>
+</html>
